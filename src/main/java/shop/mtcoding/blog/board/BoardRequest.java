@@ -10,14 +10,20 @@ public class BoardRequest {
     @Data
     public static class SavaDTO{
         private String title;
-        private MultipartFile file;
+        private MultipartFile video;
 
 
         public Board toEntity(){
             return Board.builder()
                     .title(title)
-                    .video(file.getOriginalFilename())
+                    .video(video.getOriginalFilename())
                     .build();
         }
+    }
+
+    @Data
+    public static class UpdateDTO{
+        private String title;
+        private MultipartFile video;
     }
 }

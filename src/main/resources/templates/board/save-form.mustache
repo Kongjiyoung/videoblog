@@ -8,7 +8,10 @@
         <div class="card-header"><b>동영상 업로드</b></div>
         <div class="card-body">
             <form method="POST" enctype="multipart/form-data" action="/board/upload">
-                <input type="file" name="file"/>
+                <div class="mb-3">
+                    <input type="text" class="form-control" placeholder="Enter title" name="title">
+                </div>
+                <input type="file" name="video"/>
                 <button type="submit">Upload</button>
             </form>
         </div>

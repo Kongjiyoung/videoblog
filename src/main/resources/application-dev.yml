@@ -16,7 +16,7 @@ spring:
       expose-request-attributes: true
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:mem:test;MODE=MySQL
+    url: jdbc:h2:file:./data/testdb;MODE=MySQL
     username: sa
     password:
   h2:
@@ -28,9 +28,12 @@ spring:
         - classpath:db/data.sql
   jpa:
     hibernate:
-      ddl-auto: create
+      ddl-auto: update
     show-sql: true
     properties:
       hibernate:
         format_sql: true
     defer-datasource-initialization: true
+  devtools:
+    restart:
+      enabled: false

@@ -4,19 +4,20 @@
 
     <!-- 수정삭제버튼 -->
     <div class="d-flex justify-content-end">
-        <a href="/board/{{videoName}}/update-form" class="btn btn-warning me-1">수정</a>
-        <form action="/board//delete" method="post">
+        <a href="/board/{{board.id}}/update-form" class="btn btn-warning me-1">수정</a>
+        <form action="/board/{{board.id}}/delete" method="post">
             <button class="btn btn-danger">삭제</button>
         </form>
     </div>
 
     <!-- 게시글내용 -->
     <div>
-        <h2><b>{{videoName}}</b></h2>
-        <hr />
+        <!-- 게시글내용 -->
+        <h2><b>{{board.title}}</b></h2>
+        <hr/>
         <div class="m-4 p-2">
             <video width="640" height="360" controls>
-                <source src="/video/{{videoName}}" type="video/mp4">
+                <source src="/video/{{board.video}}" type="video/mp4">
             </video>
         </div>
     </div>

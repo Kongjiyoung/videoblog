@@ -5,12 +5,12 @@
     <div class="card">
         <div class="card-header"><b>영상 수정하기 화면입니다</b></div>
         <div class="card-body">
-            <form method="POST" enctype="multipart/form-data" action="/board/{{board.videoName}}/update">
+            <form method="POST" enctype="multipart/form-data" action="/board/{{board.id}}/update">
                 <div class="mb-3">
                     <input type="text" class="form-control" placeholder="Enter title" name="title"
                            value="{{board.title}}">
                 </div>
-                <input type="file" name="file"/>
+                <input type="file" name="video"/>
                 <button type="submit">수정하기</button>
             </form>
 
