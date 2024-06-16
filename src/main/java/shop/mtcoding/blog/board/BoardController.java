@@ -20,6 +20,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @Controller
 public class BoardController {
+    //수정
     private final BoardJPARepository boardJPARepository;
     private static final String FOLDER = "src/main/resources/static/video/";
 
